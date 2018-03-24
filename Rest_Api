@@ -1,0 +1,5 @@
+To find the Controller account ID using the REST API, use one of the following URLs to create a GET request.
+
+SaaS: https://<<accountName>>.saas.appdynamics.com/controller/api/accounts/myaccount
+On-Premise: http[s]://<<hostname>>/controller/api/accounts/myaccount
+----------------------------------------------------------------------------------
