@@ -1,0 +1,20 @@
+
+Instrumenting Java application using Gradle Script
+-----------------------------------------------------
+Gradle scripts are useful to build and deploy applications. If we would like to monitor applications, we need to configure the 
+javaagent on Gradle scripts.
+
+Steps:
+
+1. Edit build.gradle
+
+2. Need to include javaagent and configuration using "applicationDefaultJvmArgs".
+
+3. To add javaagent.....
+
+applicationDefaultJvmArgs = ["-javaagent:/Users/narendranath/Documents/AppServerAgent-4.3.3.2/ver4.3.3.2/javaagent.jar"]
+
+3. To add javaagent configurations dynamically , then ...
+applicationDefaultJvmArgs = ["-javaagent:/Users/skolaparthi/Documents/AppServerAgent-4.3.3.2/ver4.3.3.2/javaagent.jar", "-Dappdynamics.agent.applicationName=NewRibbonApp", "-Dappdynamics.agent.tierName=AppTier", "-Dappdynamics.agent.nodeName=AppNode"]
+
+-------------------------------------------------------------------------------------------------------------------
