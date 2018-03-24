@@ -1,0 +1,79 @@
+Java Agent - Controller Compatibility
+The 4.2.x Controller supports the following versions of the Java Agent:
+
+4.2.x
+4.1.x
+4.0.x
+3.9.x
+3.8.x
+3.7.x
+For notes on SSL protocol compatibility between versions of the agent and Controller, see SSL Compatibility Matrix for App Agent for Java - Controller. 
+
+.NET Agent - Controller Compatibility 
+The 4.2.x Controller supports the following versions of the App Agent for .NET:
+
+4.2.x
+4.1.x
+4.0.x
+3.9.x
+3.8.x
+3.7.x
+PHP Agent - Controller Compatibility
+
+The 4.2.x Controller supports the following versions of the PHP Agent:
+
+4.2.x
+4.1.x
+4.0.x
+3.9.x
+3.8.x
+3.7.7 and newer 3.7.x
+Node.js Agent - Controller Compatibility
+The 4.2.x Controller supports the following versions of the Node.js Agent:
+
+4.2.x
+4.1.x
+4.0.x
+3.9.x
+3.8.5 +
+Python Agent - Controller Compatibility
+The 4.2 Controller support the following versions of the Python Agent:
+
+4.2.x
+4.1.x
+4.0.x
+Web Server Agent - Controller Compatibility
+The 4.2.x Controller supports the following versions of the Web Server Agent:
+
+4.2.x
+4.1.x
+C / C++ Agent - Controller Compatibility
+The 4.2.x Controller supports the following versions of the C/C++ SDK:
+
+4.2.x
+Database Agent - Controller Compatibility
+The 4.2.x Controller supports version 4.0.3 and higher of the Database Agent.
+
+AppDynamics for Databases - Controller Compatibility
+The 4.2.x Controller supports the following versions of AppDynamics for Databases:
+
+2.7.4 and higher
+Note: AppDynamics for Databases version 2.7.4 is required for AppDynamics for Databases to correlate with the App Agent for PHP.
+
+Standalone Machine Agent - Controller Compatibility
+The Controller supports older agents. The 4.2.x Controller supports the following versions of the Standalone Machine Agent:
+
+4.2.x
+4.1.x
+4.0.x
+3.9.x
+3.8.x
+3.7.x
+SSL Compatibility between Java Agent and Controller
+The default protocol used by the Controller and Java Agent are:  
+
+Controller: TLSv1.2 
+Java Agent:
+For Java 8 SE applications, TLSv1.2.
+For Java 7+ applications, TLSv1.2. You can change the agent to use SSLv3 if desire. See Security for information on changing the default security protocol used by the Controller or agent. 
+For Java 5/6 applications, SSLv3. You must enable SSLv3 connection on the Controller if the agents connect directly to the Controller. See Security for information on changing the default security protocol used by the Controller or agent. 
