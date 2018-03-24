@@ -1,0 +1,61 @@
+The AD Metric Browser can display metrics as a mash-up of data from cloud vendors.
+
+For example, AD can analyze CloudWatch metrics of Amazon S3 service usage for buckets designated:
+
+Size of all the objects present in bucket(s).
+
+Objects Count of objects present in bucket(s) configured
+
+Since Last Modified Time of objects in bucket(s) configured.
+
+The code and configuration notes are at
+https://github.com/Appdynamics/aws-s3-monitoring-extension
+
+To install the agent in AWS to do the above:
+
+Download file S3Monitor.zip
+
+The jar file in it was compiled from https://github.com/Appdynamics/aws-s3-monitoring-extension and includes dependencies pulled in.
+
+PROTIP: Some enterprises prefer to recompile and store it in their Artifactory repository for internal use rather than downloading
+from the internet unreviewed by ethical hackers.
+
+Unzip it into folder machineagent install dir/monitors/
+
+The monitor.xml for AD points to the yml file. It’s in the config folder.
+
+Open S3Configurations.yml in a text editor.
+
+Copy and paste the *accesskey: for S3 account.
+
+Copy and paste the *secretkey: for S3 account.
+
+Copy and paste the * metricPrefix: Metric prefix path for AppDynamics controller.
+
+onlyConsolidatedMetric: true or false(default).
+
+If only consolidated metric is required (Bucket wise metrics will not be pushed to controller if this is true)
+
+noOfThreads: Min-1, Max-32, Default-8
+
+sizeunit: B, KB (Default), MB
+
+timeunit: Seconds (Default), Minutes, Hours, Days
+
+bucketNames: Bucket names to monitor.
+
+To monitor all available buckets remove this field or Add a bucket named “All”.
+
+To avoid permission issues, install the agent as the same user who owns the Machine Agent files or as an administrator on the host machine.
+
+PROTIP: To detect any typos, use a YML validator such as http://www.yamllint.com, even when the file is generated.
+
+Review the monitor.xml.
+
+Restart the machineagent.
+
+https://docs.appdynamics.com/display/PRO42/Where+to+Specify+Machine+Agent+Configuration
+
+The Standalone Machine Agent (Machine Agent) starts within its own JVM. In 4.2, JRE 1.8 is bundled with the OS-specific Machine Agent installation downloads.
+
+In the AppDynamics Metric Browser, look for: Application Infrastructure Performance | Tier | Custom Metrics | Amazon S3.
