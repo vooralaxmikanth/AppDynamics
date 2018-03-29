@@ -1,0 +1,46 @@
+password ;vooraapp
+
+splunk -- Logs and monitor
+New reliac --
+Data Dog
+Appdynamics
+
+PCF supports New reliac(Striaght forward feature) and Appdynamics(it's not striaght forward feature)
+
+	ops manager--> enable appdynmics check box
+
+	new reliac is contain less features and available with commercial version
+
+	Appdynamics
+		1.Pro
+		2.Lite
+
+
+	Ansible,Puppet and cheff are responsilble for system/server configurations
+
+
+
+AWS --Cloudwatch
+PCF -- Newrelic, Appdynamics	
+
+AppDynamics monitor
+	Java,Database, Transaction, Server
+
+signup-->Register-->products-->java--Start Free access--> access free access--> SAAS--> Launch AppDynamics
+
+click on pro link on right top
+
+Create Agent
+---------------
+
+Click java language
+	JVM -- Sun/Rockit 
+	Click download agent
+
+Applications
+	Click -- create Applications -- select java
+
+	Configure https://cubits2018032902290216.saas.appdynamics.com:443
+
+-javaagent:D:\Users\learning\Downloads\AppServerAgent-4.4.2.22394/appagent/javaagent.jar --- Copy into VM Arguments in RunConfiguration
+	
