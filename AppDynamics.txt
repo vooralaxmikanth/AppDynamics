@@ -42,5 +42,7 @@ Applications
 
 	Configure https://cubits2018032902290216.saas.appdynamics.com:443
 
--javaagent:D:\Users\learning\Downloads\AppServerAgent-4.4.2.22394/appagent/javaagent.jar --- Copy into VM Arguments in RunConfiguration
+Go to Runas --> Run Configurations
+Enable JMX port
+-javaagent:D:\Users\learning\Downloads\AppServerAgent-4.4.2.22394\ver4.4.2.22394\javaagent.jar --- Copy into VM Arguments in RunConfiguration
 	
